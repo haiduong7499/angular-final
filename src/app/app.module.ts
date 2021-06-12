@@ -9,6 +9,9 @@ import { CarouselComponent } from './component/home/carousel/carousel.component'
 import { ContentComponent } from './component/home/content/content.component';
 import { FooterComponent } from './component/home/footer/footer.component';
 import { CreateComponent } from './component/create/create.component';
+import { CategoryComponent } from './component/category/category.component';
+import { CreateCateComponent } from './component/create-cate/create-cate.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { CreateComponent } from './component/create/create.component';
     CarouselComponent,
     ContentComponent,
     FooterComponent,
-    CreateComponent
+    CreateComponent,
+    CategoryComponent,
+    CreateCateComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

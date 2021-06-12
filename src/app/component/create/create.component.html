@@ -1,19 +1,46 @@
-<form class="container">
+<h2 class="text-center my-2">Create New Game</h2>
+<form class="container my-3" [formGroup]="infoGame" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="gameName">Game Name</label>
-    <input class="form-control" id="gameName" placeholder="Game Name">
+    <input class="form-control" id="gameName" placeholder="Game Name" formControlName="gameName">
+
+    <div *ngIf="form.gameName.invalid && form.gameName.dirty">
+      <div *ngIf="form.gameName.errors">
+        <small id="nameHelp" class="form-text text-danger">Please enter your game name</small>
+      </div>
+    </div>
   </div>
+
   <div class="form-group">
     <label for="gameDescription">Game Description</label>
-    <input class="form-control" id="gameDescription" placeholder="Game Description">
+    <input class="form-control" id="gameDescription" placeholder="Game Description" formControlName="gameDescription">
+
+    <div *ngIf="form.gameDescription.invalid && form.gameDescription.dirty">
+      <div *ngIf="form.gameDescription.errors">
+        <small id="descriptionHelp" class="form-text text-danger">Please enter your game description</small>
+      </div>
+    </div>
+
+
   </div>
   <div class="form-group">
     <label for="gamePrice">Price</label>
-    <input class="form-control" id="gamePrice" placeholder="Price">
+    <input type="number" class="form-control" id="gamePrice" placeholder="Price" formControlName="gamePrice">
+    <div *ngIf="form.gamePrice.invalid && form.gamePrice.dirty">
+      <div *ngIf="form.gamePrice.errors">
+        <small id="priceHelp" class="form-text text-danger">Please enter your price</small>
+      </div>
+    </div>
   </div>
   <div class="form-group">
     <label for="gamePlatform">Platform</label>
-    <input class="form-control" id="gamePlatform" placeholder="Plat Form">
+    <input class="form-control" id="gamePlatform" placeholder="Plat Form" formControlName="gamePlatform">
+
+    <div *ngIf="form.gamePlatform.invalid && form.gamePlatform.dirty">
+      <div *ngIf="form.gamePlatform.errors">
+        <small id="platformHelp" class="form-text text-danger">Please enter your platform</small>
+      </div>
+    </div>
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
