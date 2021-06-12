@@ -1,5 +1,6 @@
 <h2 class="text-center my-2">Create New Game</h2>
 <form class="container my-3" [formGroup]="infoGame" (ngSubmit)="onSubmit()">
+
   <div class="form-group">
     <label for="gameName">Game Name</label>
     <input class="form-control" id="gameName" placeholder="Game Name" formControlName="gameName">
@@ -43,5 +44,5 @@
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="infoGame.invalid">Submit</button>
 </form>
