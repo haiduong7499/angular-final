@@ -10,8 +10,12 @@ import { ContentComponent } from './component/home/content/content.component';
 import { FooterComponent } from './component/home/footer/footer.component';
 import { CreateComponent } from './component/create/create.component';
 import { CategoryComponent } from './component/category/category.component';
-import { CreateCateComponent } from './component/create-cate/create-cate.component';
+import { CreateCateComponent } from './component/category/create-cate/create-cate.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CateItemComponent } from './component/category/cate-list/cate-item/cate-item.component';
+import { CateListComponent } from './component/category/cate-list/cate-list.component';
+import { CategoryService } from './component/category/category.service';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -23,14 +27,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     CreateComponent,
     CategoryComponent,
-    CreateCateComponent
+    CreateCateComponent,
+    CateItemComponent,
+    CateListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    NgxPaginationModule
   ],
-  providers: [],
+  providers: [CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

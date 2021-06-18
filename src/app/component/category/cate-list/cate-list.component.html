@@ -1,0 +1,11 @@
+<h2 class="text-center p 3">Category</h2>
+<button type="button" class="btn btn-primary mb-3 ml-3" routerLink="/create-cate">
+  Create new category
+</button>
+<div class="row">
+  <div class="col-sm-12">
+    <app-cate-item *ngFor="let categoryItem of categories | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalLength }; let i = index " [category]="categoryItem" [index]="i">
+    </app-cate-item>
+  </div>
+</div>
+<pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>

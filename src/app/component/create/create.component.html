@@ -4,7 +4,6 @@
   <div class="form-group">
     <label for="gameName">Game Name</label>
     <input class="form-control" id="gameName" placeholder="Game Name" formControlName="gameName">
-
     <div *ngIf="form.gameName.invalid && form.gameName.dirty">
       <div *ngIf="form.gameName.errors">
         <small id="nameHelp" class="form-text text-danger">Please enter your game name</small>
@@ -15,15 +14,13 @@
   <div class="form-group">
     <label for="gameDescription">Game Description</label>
     <input class="form-control" id="gameDescription" placeholder="Game Description" formControlName="gameDescription">
-
     <div *ngIf="form.gameDescription.invalid && form.gameDescription.dirty">
       <div *ngIf="form.gameDescription.errors">
         <small id="descriptionHelp" class="form-text text-danger">Please enter your game description</small>
       </div>
     </div>
-
-
   </div>
+
   <div class="form-group">
     <label for="gamePrice">Price</label>
     <input type="number" class="form-control" id="gamePrice" placeholder="Price" formControlName="gamePrice">
@@ -33,6 +30,7 @@
       </div>
     </div>
   </div>
+
   <div class="form-group">
     <label for="gamePlatform">Platform</label>
     <input class="form-control" id="gamePlatform" placeholder="Plat Form" formControlName="gamePlatform">

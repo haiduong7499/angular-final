@@ -1,0 +1,32 @@
+<h2 class="text-center">Create Category</h2>
+<form class="container my-3" [formGroup] = "cateGames" (ngSubmit)="onSubmit()">
+
+  <div class="form-group" >
+    <label for="idCategory">Id Category</label>
+    <input class="form-control" id="idCategory" placeholder="ID Category" formControlName="idCategory">
+    <div *ngIf="form.idCategory.invalid && form.idCategory.dirty">
+      <div *ngIf="form.idCategory.errors">
+        <small id="idCategory" class="form-text text-danger">Please enter id Category</small>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="nameCategory">Name Category</label>
+    <input class="form-control" id="nameCategory" placeholder="Name Category" formControlName="nameCategory">
+    <div *ngIf="form.nameCategory.invalid && form.nameCategory.dirty">
+      <div *ngIf="form.nameCategory.errors">
+        <small id="nameHelp" class="form-text text-danger">Please enter Name Category</small>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Description">Description</label>
+    <input class="form-control" id="Description" placeholder="Description" formControlName="Description">
+<div *ngIf="form.Description.invalid && form.Description.dirty">
+      <div *ngIf="form.Description.errors">
+        <small id="descriptionHelp" class="form-text text-danger">Please enter Description</small>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary my-2"[disabled]="cateGames.invalid">Submit</button>
+</form>
