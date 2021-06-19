@@ -13,16 +13,19 @@ export class CateItemComponent implements OnInit {
   @Input() index!: number;
   constructor(
     private categoryService: CategoryService,
-    private router: Router) {}
+    private route: ActivatedRoute,
+    private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+   }
 
   delete() {
     this.categoryService.deleteCategory(this.index);
     this.router.navigate(['/category']);
-    console.log("delete"+ this.index);
+    console.log("delete" + this.index);
   }
   Edit() {
-    console.log("edit" + this.index);
+    this.router.navigate([this.index + '/edit'], { relativeTo: this.route });
   }
 }

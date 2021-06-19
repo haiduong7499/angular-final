@@ -8,20 +8,28 @@ import { HomeComponent } from './component/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component:HomeComponent
+    component: HomeComponent
   },
   {
     path: 'create',
-    component:CreateComponent
+    component: CreateComponent
   },
   {
-    path:'create-cate',
-    component:CreateCateComponent,
+    path: 'create-cate',
+    component: CreateCateComponent,
   },
   {
     path: 'category',
-    component:CategoryComponent
-  }
+    component: CategoryComponent,
+    children: [
+      {
+        path: ':idCategory/edit',
+        component: CreateCateComponent
+      },
+
+    ]
+  },
+
 ];
 
 @NgModule({

@@ -44,9 +44,9 @@ export class CreateCateComponent implements OnInit {
 
     if(this.editMode) {
       const category = this.categoryService.getCategory(this.idCategory);
-      nameCategory = category.nameCategory;
+      nameCategory = category?.nameCategory;
       idCategory = category?.idCategory;
-      description = category.description;
+      description = category?.description;
     }
     this.cateGames.controls;
   }
@@ -54,7 +54,7 @@ export class CreateCateComponent implements OnInit {
   onSubmit() {
     if(this.editMode){
       this.categoryService.updateCategory(this.idCategory, this.cateGames.value);
-      console.log("Edit:" + [this.idCategory, this.cateGames.value, this.categoryService.updateCategory(this.idCategory, this.cateGames.value)]);
+      console.log("Edit:" + this.idCategory);
     }
     else{
       this.categoryService.addCategory(this.cateGames.value);

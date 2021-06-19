@@ -26,8 +26,8 @@ export class CateListComponent implements OnInit {
     console.log(this.categories);
   }
 
-  onNewCategory() {
-    this.router.navigate(['new'], {relativeTo: this.route})
+  onNewCate() {
+    this.router.navigate(['create-cate'], {relativeTo: this.route})
   }
 
 

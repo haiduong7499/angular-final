@@ -16,7 +16,7 @@ export class CategoryService {
       'MB2',
       'Garena',
       'League of Legends'
-    )
+    ),
   ];
   constructor() { }
   getCategories(){
