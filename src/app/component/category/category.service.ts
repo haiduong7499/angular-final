@@ -25,15 +25,15 @@ export class CategoryService {
   getCategory(index: number){
     return this.categories[index];
   }
-  addRecipe(category: Category) {
+  addCategory(category: Category) {
     this.categories.push(category);
   }
 
-  updateRecipe(index: number, newCategory: Category) {
+  updateCategory(index: number, newCategory: Category) {
     this.categories[index] = newCategory;
   }
 
-  deleteRecipe(index: number) {
+  deleteCategory(index: number) {
     this.categories.splice(index, 1);
 
 }
