@@ -19,15 +19,12 @@ const routes: Routes = [
     component: CreateCateComponent,
   },
   {
+    path: 'category/:idCategory/edit',
+    component: CreateCateComponent
+  },
+  {
     path: 'category',
     component: CategoryComponent,
-    children: [
-      {
-        path: ':idCategory/edit',
-        component: CreateCateComponent
-      },
-
-    ]
   },
 
 ];
