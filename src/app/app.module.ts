@@ -16,6 +16,7 @@ import { CateItemComponent } from './component/category/cate-list/cate-item/cate
 import { CateListComponent } from './component/category/cate-list/cate-list.component';
 import { CategoryService } from './component/category/category.service';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { ProductComponent } from './component/product/product.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     CategoryComponent,
     CreateCateComponent,
     CateItemComponent,
-    CateListComponent
+    CateListComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
