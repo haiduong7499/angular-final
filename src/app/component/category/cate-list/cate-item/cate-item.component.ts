@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Category } from '../../category.model';
 import { CategoryService } from '../../category.service';
 
@@ -9,11 +10,19 @@ import { CategoryService } from '../../category.service';
 })
 export class CateItemComponent implements OnInit {
   @Input() category?: Category;
-  @Input() index?: number;
-  constructor(private categoryService: CategoryService) {
-  }
+  @Input() index!: number;
+  constructor(
+    private categoryService: CategoryService,
+    private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  delete() {
+    this.categoryService.deleteCategory(this.index);
+    this.router.navigate(['/category']);
+    console.log("delete"+ this.index);
+  }
+  Edit() {
+    console.log("edit" + this.index);
+  }
 }
