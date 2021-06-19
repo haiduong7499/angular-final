@@ -69,6 +69,6 @@ export class CreateCateComponent implements OnInit {
     // else { console.log(this.cateGames.value); }
   }
   onCancel(){
-    this.router.navigate(["../"], {relativeTo: this.route});
+    this.router.navigate(["/category"], {relativeTo: this.route});
   }
 }
