@@ -1,0 +1,58 @@
+<style>
+  .profile-card {
+    padding: 50px 0;
+  }
+
+  .profile-card__wrapper {
+    padding: 20px 0;
+
+  }
+
+  .profile-card__wrapper .card {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
+
+  @media (max-width: 767px) {
+    .profile-card__wrapper .card {
+      width: calc(100% / 3 - 30px);
+      margin-left: 30px;
+    }
+  }
+
+  @media (max-width:567px) {
+    .profile-card__wrapper .card {
+      width: calc(100% / 2 - 30px);
+      margin-left: 30px;
+    }
+  }
+
+  .profile-card__wrapper .inner {
+    margin-left: -30px;
+    flex-wrap: wrap;
+  }
+
+
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+</style>
+<div class="card" [routerLink]="[index]" routerLinkActive="active">
+  <div class="card__image">
+    <img [src]="product?.image" alt="John" style="width:340px;">
+  </div>
+  <h1>{{product?.nameProduct}}</h1>
+  <p class="title">{{product?.price}} VND</p>
+  <p>{{product?.description}}</p>
+  <div class="row" style="margin-left:50px">
+    <p style="padding-right: 5px;"><button type="button" class="btn btn-info" (click)="edit()">Edit</button></p>
+    <p><button type="button" class="btn btn-danger" (click)="delete()">Delete</button></p>
+  </div>
+</div>

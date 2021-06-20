@@ -1,0 +1,65 @@
+<h2 class="text-center my-2">Create New Game</h2>
+<form class="container my-3" [formGroup]="infoGame" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="idProduct">Id Game</label>
+    <input class="form-control" id="idProduct" formControlName="idProduct">
+    <div *ngIf="form.idProduct.invalid && form.idProduct.dirty">
+      <div *ngIf="form.idProduct.errors">
+        <small id="nameHelp" class="form-text text-danger">Please enter Game ID</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="nameProduct">Name Game</label>
+    <input class="form-control" id="nameProduct"  formControlName="nameProduct">
+    <div *ngIf="form.nameProduct.invalid && form.nameProduct.dirty">
+      <div *ngIf="form.nameProduct.errors">
+        <small id="descriptionHelp" class="form-text text-danger">Please enter Game Name </small>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input class="form-control" id="description"  formControlName="description">
+    <div *ngIf="form.description.invalid && form.description.dirty">
+      <div *ngIf="form.description.errors">
+        <small id="priceHelp" class="form-text text-danger">Please enter your Description</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" class="form-control" id="price" placeholder="Price" formControlName="price">
+    <div *ngIf="form.price.invalid && form.price.dirty">
+      <div *ngIf="form.price.errors">
+        <small id="priceHelp" class="form-text text-danger">Please enter your price</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select name="category" id="category" formControlName="category" (change)="handleSelect($event)">
+      <option value="Steam">Steam</option>
+      <option value="Garena">Garena</option>
+
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="file" class="form-control" id="image" placeholder="Image" formControlName="image" (change)="handleUploadImage($event)">
+
+    <div *ngIf="form.image.invalid && form.image.dirty">
+      <div *ngIf="form.image.errors">
+        <small id="platformHelp" class="form-text text-danger">Please enter your image</small>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="infoGame.invalid">Submit</button>
+</form>

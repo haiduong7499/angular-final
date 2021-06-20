@@ -1,0 +1,81 @@
+<style>
+  .profile-card{
+    padding: 50px 0;
+  }
+  .profile-card__wrapper{
+    padding: 20px 0;
+
+  }
+  .profile-card__wrapper .card{
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
+  @media (max-width: 767px) {
+    .profile-card__wrapper .card{
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+  }
+
+  @media (max-width:567px) {
+    .profile-card__wrapper .card{
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  }
+
+  .profile-card__wrapper .inner{
+    margin-left: -30px;
+    flex-wrap: wrap;
+  }
+  .card {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial; */
+  }
+
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+
+  button:hover,
+  a:hover {
+    opacity: 0.7;
+  }
+</style>
+<section class="profile-card">
+  <h2 style="text-align:center">Game List</h2>
+
+  <div class="profile-card__wrapper">
+    <div class="container">
+      <div class="d-flex inner">
+        <app-product-item
+        *ngFor="let productItem of products | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalLength }; let i = index" [product] = "productItem" [index]="i"
+        ></app-product-item>
+      </div>
+    </div>
+    <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
+  </div>
+</section>
