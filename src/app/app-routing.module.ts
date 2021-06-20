@@ -8,12 +8,19 @@ import { HomeComponent } from './component/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    children: [
+      {
+        path: ':idProduct/edit',
+        component: CreateComponent
+      },
+    ]
   },
   {
     path: 'create',
     component: CreateComponent
   },
+
   {
     path: 'create-cate',
     component: CreateCateComponent,

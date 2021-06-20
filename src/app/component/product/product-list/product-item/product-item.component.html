@@ -1,33 +1,37 @@
 <style>
-  .profile-card{
+  .profile-card {
     padding: 50px 0;
   }
-  .profile-card__wrapper{
+
+  .profile-card__wrapper {
     padding: 20px 0;
 
   }
-  .profile-card__wrapper .card{
+
+  .profile-card__wrapper .card {
     width: calc(100% / 4 - 30px);
     margin-left: 30px;
   }
+
   @media (max-width: 767px) {
-    .profile-card__wrapper .card{
-    width: calc(100% / 3 - 30px);
-    margin-left: 30px;
-  }
+    .profile-card__wrapper .card {
+      width: calc(100% / 3 - 30px);
+      margin-left: 30px;
+    }
   }
 
   @media (max-width:567px) {
-    .profile-card__wrapper .card{
-    width: calc(100% / 2 - 30px);
-    margin-left: 30px;
-  }
+    .profile-card__wrapper .card {
+      width: calc(100% / 2 - 30px);
+      margin-left: 30px;
+    }
   }
 
-  .profile-card__wrapper .inner{
+  .profile-card__wrapper .inner {
     margin-left: -30px;
     flex-wrap: wrap;
   }
+
   .card {
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -41,44 +45,21 @@
     font-size: 18px;
   }
 
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #071c33 ;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-
   a {
     text-decoration: none;
     font-size: 22px;
     color: black;
   }
-
-  button:hover,
-  a:hover {
-    color:#fcb85d;
-    opacity: 0.9;
-  }
 </style>
 <div class="card" [routerLink]="[index]" routerLinkActive="active">
   <div class="card__image">
-    <img [src]="product?.image" alt="John"
-      style="width:340.23px; height:200px">
+    <img [src]="product?.image" alt="John" style="width:340.23px; height:200px">
   </div>
   <h1>{{product?.nameProduct}}</h1>
   <p class="title">{{product?.price}} VND</p>
   <p>{{product?.description}}</p>
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-facebook"></i></a>
+  <div class="row" style="margin-left:50px">
+    <p style="padding-right: 5px;"><button type="button" class="btn btn-info" (click)="edit()">Edit</button></p>
+    <p><button type="button" class="btn btn-danger" (click)="delete()">Delete</button></p>
   </div>
-  <p><button>Contact</button></p>
 </div>

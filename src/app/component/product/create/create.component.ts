@@ -64,13 +64,15 @@ export class CreateComponent implements OnInit {
 
   onSubmit() {
     if (this.editMode) {
+      this.infoGame.value.image = (this.infoGame.value.image).replace("C:\\fakepath\\", this.filePath);
       this.productService.updateProduct(this.idProduct, this.infoGame.value);
+      this.router.navigate(["/"], {relativeTo: this.route});
       console.log("Edit" + [this.idProduct, this.infoGame.value]);
     }
     else {
       this.infoGame.value.image = (this.infoGame.value.image).replace("C:\\fakepath\\", this.filePath);
       this.productService.addProduct(this.infoGame.value);
-
+      this.router.navigate(["/"], {relativeTo: this.route});
       console.log(this.infoGame.value.image);
     }
   }
