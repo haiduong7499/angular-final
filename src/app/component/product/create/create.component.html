@@ -6,7 +6,7 @@
     <input class="form-control" id="idProduct" formControlName="idProduct">
     <div *ngIf="form.idProduct.invalid && form.idProduct.dirty">
       <div *ngIf="form.idProduct.errors">
-        <small id="nameHelp" class="form-text text-danger">Please enter your game name</small>
+        <small id="nameHelp" class="form-text text-danger">Please enter Game ID</small>
       </div>
     </div>
   </div>
@@ -16,7 +16,7 @@
     <input class="form-control" id="nameProduct"  formControlName="nameProduct">
     <div *ngIf="form.nameProduct.invalid && form.nameProduct.dirty">
       <div *ngIf="form.nameProduct.errors">
-        <small id="descriptionHelp" class="form-text text-danger">Please enter your game description</small>
+        <small id="descriptionHelp" class="form-text text-danger">Please enter Game Name </small>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@
     <input class="form-control" id="description"  formControlName="description">
     <div *ngIf="form.description.invalid && form.description.dirty">
       <div *ngIf="form.description.errors">
-        <small id="priceHelp" class="form-text text-danger">Please enter your price</small>
+        <small id="priceHelp" class="form-text text-danger">Please enter your Description</small>
       </div>
     </div>
   </div>
@@ -43,11 +43,10 @@
 
   <div class="form-group">
     <label for="category">Category</label>
-    <select name="category" id="category" formControlName="category">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="opel">Opel</option>
-      <option value="audi">Audi</option>
+    <select name="category" id="category" formControlName="category" (change)="handleSelect($event)">
+      <option value="Steam">Steam</option>
+      <option value="Garena">Garena</option>
+
     </select>
   </div>
 

@@ -7,7 +7,7 @@ import { Product } from './product.model';
 export class ProductService {
   filePath: string = "assets/image/";
   productSelected = new EventEmitter<Product>();
-  private product: Product[] = [
+  private products: Product[] = [
     new Product(
       "Product 1",
       "CS:GO",
@@ -27,9 +27,20 @@ export class ProductService {
   ];
   constructor() { }
   getProducts(){
-    return this.product;
+    return this.products;
   }
   getProduct(index: number){
-    return this.product[index];
+    return this.products[index];
   }
+  addProduct(product: Product) {
+    this.products.push(product);
+  }
+
+  updateProduct(index: number, newProduct: Product) {
+    this.products[index] = newProduct;
+  }
+
+  deleteProduct(index: number) {
+    this.products.splice(index, 1);
+}
 }
