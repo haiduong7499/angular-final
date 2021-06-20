@@ -32,13 +32,6 @@
     flex-wrap: wrap;
   }
 
-  .card {
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    font-family: arial; */
-  }
 
   .title {
     color: grey;
@@ -53,7 +46,7 @@
 </style>
 <div class="card" [routerLink]="[index]" routerLinkActive="active">
   <div class="card__image">
-    <img [src]="product?.image" alt="John" style="width:340.23px; height:200px">
+    <img [src]="product?.image" alt="John" style="width:340px;">
   </div>
   <h1>{{product?.nameProduct}}</h1>
   <p class="title">{{product?.price}} VND</p>
