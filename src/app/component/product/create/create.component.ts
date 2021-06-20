@@ -9,12 +9,15 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class CreateComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
-
+  filePath:string = "assets/image/";
+  event?:any;
   infoGame = this.fb.group({
-    "gameName": ["", [Validators.required]],
-    "gameDescription": ["", [Validators.required]],
-    "gamePrice": ["", [Validators.required]],
-    "gamePlatform": ["", [Validators.required]]
+    "idProduct": ["", [Validators.required]],
+    "nameProduct": ["", [Validators.required]],
+    "description": ["", [Validators.required]],
+    "price": ["", [Validators.required]],
+    "category": ["", [Validators.required]],
+    "image": ["", [Validators.required]]
   })
   get form() {
     return this.infoGame.controls;
@@ -27,5 +30,9 @@ export class CreateComponent implements OnInit {
       console.log('khong submit dc dau');
     }
     else { console.log(this.infoGame.value); }
+  }
+
+  handleUploadImage(e:any) {
+    console.log(this.filePath+ e.target.files[0].name);
   }
 }

@@ -8,7 +8,7 @@ import { HeaderComponent } from './component/home/header/header.component';
 import { CarouselComponent } from './component/home/carousel/carousel.component';
 import { ContentComponent } from './component/home/content/content.component';
 import { FooterComponent } from './component/home/footer/footer.component';
-import { CreateComponent } from './component/create/create.component';
+import { CreateComponent } from './component/product/create/create.component';
 import { CategoryComponent } from './component/category/category.component';
 import { CreateCateComponent } from './component/category/create-cate/create-cate.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -17,6 +17,8 @@ import { CateListComponent } from './component/category/cate-list/cate-list.comp
 import { CategoryService } from './component/category/category.service';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ProductComponent } from './component/product/product.component';
+import { ProductListComponent } from './component/product/product-list/product-list.component';
+import { ProductItemComponent } from './component/product/product-list/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ProductComponent } from './component/product/product.component';
     CreateCateComponent,
     CateItemComponent,
     CateListComponent,
-    ProductComponent
+    ProductComponent,
+    ProductListComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
