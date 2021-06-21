@@ -38,21 +38,45 @@
     font-size: 18px;
   }
 
+  .card {
+    border-radius: 5px;
+    background-color: rgb(42, 71, 94);
+  }
+
+  .card__image {
+    border-radius: 5px;
+  }
+  .card div{
+    color: white;
+  }
+
+  button:hover {
+    opacity: 0.7;
+  }
+
+  button {
+    background-color: rgb(27, 40, 56);
+    color: white;
+    align-self: center;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+
   a {
     text-decoration: none;
     font-size: 22px;
     color: black;
   }
 </style>
-<div class="card" [routerLink]="[index]" routerLinkActive="active">
+<div class="card d-flex flex-column align-items-center" [routerLink]="[index]" routerLinkActive="active">
   <div class="card__image">
     <img [src]="product?.image" alt="John" style="width:340px;">
   </div>
-  <h1>{{product?.nameProduct}}</h1>
-  <p class="title">{{product?.price}} VND</p>
-  <p>{{product?.description}}</p>
-  <div class="row" style="margin-left:50px">
-    <p style="padding-right: 5px;"><button type="button" class="btn btn-info" (click)="edit()">Edit</button></p>
-    <p><button type="button" class="btn btn-danger" (click)="delete()">Delete</button></p>
+  <div class="h1">{{product?.nameProduct}}</div>
+  <div class="h5">{{product?.price}} VND</div>
+  <div class="h8">{{product?.description}}</div>
+  <div class="row">
+    <div><button class="btn" (click)="edit()">Edit</button></div>
+    <div class="pl-2"><button class="btn" (click)="delete()">Delete</button></div>
   </div>
 </div>

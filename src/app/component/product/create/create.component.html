@@ -1,65 +1,96 @@
 <h2 class="text-center my-2">Create New Game</h2>
-<form class="container my-3" [formGroup]="infoGame" (ngSubmit)="onSubmit()">
+<form class="container my-3" [formGroup]="infoGame" (ngSubmit)="onSubmit()"
+  style="background-color: rgb(199, 213, 224); border-radius: 10px;">
 
-  <div class="form-group">
-    <label for="idProduct">Id Game</label>
-    <input class="form-control" id="idProduct" formControlName="idProduct">
-    <div *ngIf="form.idProduct.invalid && form.idProduct.dirty">
-      <div *ngIf="form.idProduct.errors">
-        <small id="nameHelp" class="form-text text-danger">Please enter Game ID</small>
+  <div class="col d-flex flex-column ">
+    <div class="row d-flex justify-content-around">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="idProduct">Id Game</label>
+          <input class="form-control" id="idProduct" formControlName="idProduct">
+          <div *ngIf="form.idProduct.invalid && form.idProduct.dirty">
+            <div *ngIf="form.idProduct.errors">
+              <small id="nameHelp" class="form-text text-danger">Please enter Game ID</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nameProduct">Name Game</label>
+          <input class="form-control" id="nameProduct" formControlName="nameProduct">
+          <div *ngIf="form.nameProduct.invalid && form.nameProduct.dirty">
+            <div *ngIf="form.nameProduct.errors">
+              <small id="descriptionHelp" class="form-text text-danger">Please enter Game Name </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input class="form-control" id="description" formControlName="description">
+          <div *ngIf="form.description.invalid && form.description.dirty">
+            <div *ngIf="form.description.errors">
+              <small id="priceHelp" class="form-text text-danger">Please enter your Description</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" class="form-control" id="price" formControlName="price">
+          <div *ngIf="form.price.invalid && form.price.dirty">
+            <div *ngIf="form.price.errors">
+              <small id="priceHelp" class="form-text text-danger">Please enter your price</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <div for="category" class="pr-1 pb-2">Category</div>
+          <select name="category" id="category" formControlName="category" (change)="handleSelect($event)">
+            <option value="Steam">Steam</option>
+            <option value="Garena">Garena</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image</label>
+          <input type="file" class="form-control" id="image" placeholder="Image" formControlName="image"
+            (change)="handleUploadImage($event)">
+
+          <div *ngIf="form.image.invalid && form.image.dirty">
+            <div *ngIf="form.image.errors">
+              <small id="platformHelp" class="form-text text-danger">Please enter your image</small>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <button class="btn col-1 mb-1" [disabled]="infoGame.invalid">Submit</button>
   </div>
-
-  <div class="form-group">
-    <label for="nameProduct">Name Game</label>
-    <input class="form-control" id="nameProduct"  formControlName="nameProduct">
-    <div *ngIf="form.nameProduct.invalid && form.nameProduct.dirty">
-      <div *ngIf="form.nameProduct.errors">
-        <small id="descriptionHelp" class="form-text text-danger">Please enter Game Name </small>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="description">Description</label>
-    <input class="form-control" id="description"  formControlName="description">
-    <div *ngIf="form.description.invalid && form.description.dirty">
-      <div *ngIf="form.description.errors">
-        <small id="priceHelp" class="form-text text-danger">Please enter your Description</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="price">Price</label>
-    <input type="number" class="form-control" id="price" placeholder="Price" formControlName="price">
-    <div *ngIf="form.price.invalid && form.price.dirty">
-      <div *ngIf="form.price.errors">
-        <small id="priceHelp" class="form-text text-danger">Please enter your price</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="category">Category</label>
-    <select name="category" id="category" formControlName="category" (change)="handleSelect($event)">
-      <option value="Steam">Steam</option>
-      <option value="Garena">Garena</option>
-
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label for="image">Image</label>
-    <input type="file" class="form-control" id="image" placeholder="Image" formControlName="image" (change)="handleUploadImage($event)">
-
-    <div *ngIf="form.image.invalid && form.image.dirty">
-      <div *ngIf="form.image.errors">
-        <small id="platformHelp" class="form-text text-danger">Please enter your image</small>
-      </div>
-    </div>
-  </div>
-
-  <button type="submit" class="btn btn-primary" [disabled]="infoGame.invalid">Submit</button>
 </form>
+<style>
+  .form-group {
+    padding: 10px 0;
+  }
+
+  button:hover {
+    opacity: 0.7;
+  }
+
+  button {
+    background-color: rgb(27, 40, 56);
+    color: white;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  select {
+    width: 525px;
+    height: 40px;
+    border-radius: 5px;
+  }
+</style>

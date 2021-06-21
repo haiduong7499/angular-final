@@ -1,56 +1,52 @@
 <style>
-  .profile-card{
+  .profile-card {
     padding: 50px 0;
+    background-color: rgb(199, 213, 224);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1024px-Steam_icon_logo.svg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  .profile-card__wrapper{
-    padding: 20px 0;
 
+  .my-pagination /deep/ .ngx-pagination {
+    text-align: center;
+    color: white;
   }
-  .profile-card__wrapper .card{
+
+  .my-pagination /deep/ .ngx-pagination .current {
+    background: rgb(42, 71, 94);
+    border-radius: 20px;
+  }
+
+  .profile-card__wrapper {
+    padding: 20px 0;
+  }
+
+  .profile-card__wrapper .card {
     width: calc(100% / 4 - 30px);
     margin-left: 30px;
   }
+
   @media (max-width: 767px) {
-    .profile-card__wrapper .card{
-    width: calc(100% / 3 - 30px);
-    margin-left: 30px;
-  }
+    .profile-card__wrapper .card {
+      width: calc(100% / 3 - 30px);
+      margin-left: 30px;
+    }
   }
 
   @media (max-width:567px) {
-    .profile-card__wrapper .card{
-    width: calc(100% / 2 - 30px);
-    margin-left: 30px;
-  }
+    .profile-card__wrapper .card {
+      width: calc(100% / 2 - 30px);
+      margin-left: 30px;
+    }
   }
 
-  .profile-card__wrapper .inner{
-    margin-left: -30px;
+  .profile-card__wrapper .inner {
     flex-wrap: wrap;
-  }
-  .card {
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    font-family: arial; */
+    padding: 5px;
   }
 
   .title {
     color: grey;
-    font-size: 18px;
-  }
-
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
     font-size: 18px;
   }
 
@@ -66,16 +62,17 @@
   }
 </style>
 <section class="profile-card">
-  <h2 style="text-align:center">Game List</h2>
+  <h2 style="text-align:center; color: rgb(102, 192, 244);">Game List</h2>
 
   <div class="profile-card__wrapper">
     <div class="container">
       <div class="d-flex inner">
-        <app-product-item
-        *ngFor="let productItem of products | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalLength }; let i = index" [product] = "productItem" [index]="i"
-        ></app-product-item>
+        <app-product-item style="padding: 0 0 20px 20px;"
+          *ngFor="let productItem of products | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalLength }; let i = index"
+          [product]="productItem" [index]="i"></app-product-item>
       </div>
     </div>
-    <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
+    <pagination-controls class="my-pagination" (pageChange)="page = $event" previousLabel="" nextLabel="">
+    </pagination-controls>
   </div>
 </section>
