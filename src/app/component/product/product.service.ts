@@ -10,7 +10,7 @@ export class ProductService {
   private products: Product[] = [
     new Product(
       "Product 1",
-      "CS:GO",
+      "Crypto",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -18,7 +18,7 @@ export class ProductService {
     ),
     new Product(
       "Product 2",
-      "League of Legends",
+      "Evening Starter",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -26,7 +26,7 @@ export class ProductService {
     ),
     new Product(
       "Product 4",
-      "CS:GO",
+      "Starts SLIDE",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -34,7 +34,7 @@ export class ProductService {
     ),
     new Product(
       "Product 5",
-      "League of Legends",
+      "Color Souls",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -42,7 +42,7 @@ export class ProductService {
     ),
     new Product(
       "Product 6",
-      "CS:GO",
+      "Puzzle Light",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -50,7 +50,7 @@ export class ProductService {
     ),
     new Product(
       "Product 7",
-      "League of Legends",
+      "Fluffy Cubed",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -58,7 +58,7 @@ export class ProductService {
     ),
     new Product(
       "Product 8",
-      "CS:GO",
+      "Story Brayyl",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -66,7 +66,7 @@ export class ProductService {
     ),
     new Product(
       "Product 9",
-      "League of Legends",
+      "Quin",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -74,7 +74,7 @@ export class ProductService {
     ),
     new Product(
       "Product 10",
-      "CS:GO",
+      "Luvsie",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -82,7 +82,7 @@ export class ProductService {
     ),
     new Product(
       "Product 11",
-      "League of Legends",
+      "Higgs Hboson",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -90,7 +90,7 @@ export class ProductService {
     ),
     new Product(
       "Product 12",
-      "CS:GO",
+      "Skip Lake",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -98,7 +98,7 @@ export class ProductService {
     ),
     new Product(
       "Product 13",
-      "League of Legends",
+      "Planet Surf",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -106,7 +106,7 @@ export class ProductService {
     ),
     new Product(
       "Product 14",
-      "CS:GO",
+      "Chicken Holmes",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -114,7 +114,7 @@ export class ProductService {
     ),
     new Product(
       "Product 15",
-      "League of Legends",
+      "Soko",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -122,7 +122,7 @@ export class ProductService {
     ),
     new Product(
       "Product 16",
-      "CS:GO",
+      "Shadownest",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -130,7 +130,7 @@ export class ProductService {
     ),
     new Product(
       "Product 17",
-      "League of Legends",
+      "Catarro",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -138,7 +138,7 @@ export class ProductService {
     ),
     new Product(
       "Product 18",
-      "CS:GO",
+      "WW1",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -146,7 +146,7 @@ export class ProductService {
     ),
     new Product(
       "Product 19",
-      "League of Legends",
+      "Counter Strike",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -154,7 +154,7 @@ export class ProductService {
     ),
     new Product(
       "Product 20",
-      "CS:GO",
+      "Dota 2",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -162,7 +162,7 @@ export class ProductService {
     ),
     new Product(
       "Product 21",
-      "League of Legends",
+      "PUBG",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -170,7 +170,7 @@ export class ProductService {
     ),
     new Product(
       "Product 22",
-      "CS:GO",
+      "GTA V",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -178,7 +178,7 @@ export class ProductService {
     ),
     new Product(
       "Product 23",
-      "League of Legends",
+      "Dark Souls III",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -186,7 +186,7 @@ export class ProductService {
     ),
     new Product(
       "Product 24",
-      "CS:GO",
+      "The Hunter",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -194,7 +194,7 @@ export class ProductService {
     ),
     new Product(
       "Product 25",
-      "League of Legends",
+      "Jump Force",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -202,7 +202,7 @@ export class ProductService {
     ),
     new Product(
       "Product 26",
-      "CS:GO",
+      "Tenken 7",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -210,7 +210,7 @@ export class ProductService {
     ),
     new Product(
       "Product 27",
-      "League of Legends",
+      "Wave Break",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -218,7 +218,7 @@ export class ProductService {
     ),
     new Product(
       "Product 28",
-      "CS:GO",
+      "Lilly's Rescue",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -226,7 +226,7 @@ export class ProductService {
     ),
     new Product(
       "Product 29",
-      "League of Legends",
+      "Kinkoi",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -234,7 +234,7 @@ export class ProductService {
     ),
     new Product(
       "Product 30",
-      "CS:GO",
+      "Loli con",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -242,7 +242,7 @@ export class ProductService {
     ),
     new Product(
       "Product 31",
-      "League of Legends",
+      "Class of 09",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -250,7 +250,7 @@ export class ProductService {
     ),
     new Product(
       "Product 32",
-      "CS:GO",
+      "Hell",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -258,7 +258,7 @@ export class ProductService {
     ),
     new Product(
       "Product 33",
-      "League of Legends",
+      "Disc Golf",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -266,7 +266,7 @@ export class ProductService {
     ),
     new Product(
       "Product 34",
-      "CS:GO",
+      "Edge of Eternity",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -274,7 +274,7 @@ export class ProductService {
     ),
     new Product(
       "Product 35",
-      "League of Legends",
+      "Train of Wishes",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -282,7 +282,7 @@ export class ProductService {
     ),
     new Product(
       "Product 36",
-      "CS:GO",
+      "Cat Slide Tiles",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -290,7 +290,7 @@ export class ProductService {
     ),
     new Product(
       "Product 37",
-      "League of Legends",
+      "Mighty Goose",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -298,7 +298,7 @@ export class ProductService {
     ),
     new Product(
       "Product 38",
-      "CS:GO",
+      "Skinwalker Hunt",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -306,7 +306,7 @@ export class ProductService {
     ),
     new Product(
       "Product 39",
-      "League of Legends",
+      "Garbage",
       "Tro nay hay lam",
       200,
       "Steam",
@@ -314,7 +314,7 @@ export class ProductService {
     ),
     new Product(
       "Product 3",
-      "CS:GO",
+      "Sniper",
       "Tro nay hay lam",
       300,
       "Steam",
@@ -322,7 +322,7 @@ export class ProductService {
     ),
     new Product(
       "Product 40",
-      "League of Legends",
+      "Suicide",
       "Tro nay hay lam",
       200,
       "Steam",
